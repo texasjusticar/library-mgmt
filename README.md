@@ -25,5 +25,6 @@ All api requests must include the provided API token in the header as a Bearer A
 ### Run Tests
 
 ```ruby
+> rails db:test:prepare
 > bundle exec rspec
 ```
