@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  resources :libraries, defaults: { format: :json }
+  resources :libraries, defaults: { format: :json } do
+    member do
+      post :add_book
+    end
+  end
 end

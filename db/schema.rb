@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_01_192200) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_01_214936) do
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.string "isbn"
+    t.string "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "librarians", force: :cascade do |t|
     t.string "name"
     t.string "auth_token"
@@ -21,6 +29,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_01_192200) do
 
   create_table "libraries", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "library_book_copies", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "library_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
