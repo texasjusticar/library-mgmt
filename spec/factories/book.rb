@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :book do
     sequence :title do |n|
-      "Library-#{n}"
+      "Content-#{n}"
     end
     sequence :author do |n|
       "Author-#{n}"

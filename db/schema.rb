@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_01_214936) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_02_210441) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "isbn"
     t.string "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "borrowers", force: :cascade do |t|
+    t.string "name"
+    t.string "cc_number"
+    t.string "cc_expiration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,6 +43,15 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_01_214936) do
 
   create_table "library_book_copies", force: :cascade do |t|
     t.integer "book_id"
+    t.integer "library_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "borrower_id"
+    t.datetime "due_date"
+  end
+
+  create_table "library_borrowers", force: :cascade do |t|
+    t.integer "borrower_id"
     t.integer "library_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

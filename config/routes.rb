@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   resources :libraries, defaults: { format: :json } do
     member do
       post :add_book
+      get :find_book
+      post :register_borrower
+      patch :lend_book
+      put :lend_book
     end
   end
 end
