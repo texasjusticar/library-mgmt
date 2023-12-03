@@ -20,7 +20,11 @@ Before use, a librarian account with an api key must be setup.
 
 ### Usage
 
-All api requests must include the provided API token in the header as a Bearer Authentication.
+```ruby
+> bundle exec rails s
+```
+
+All api requests must include the provided API token in the header as a Bearer Authentication.  Use Postman or CURL (or any http client) to access localhost:3000/ (Intention was to also include swagger documentation via rswag but ran out of time.  See the spec/requests folder or `rails routes` for relevant endpoints)
 
 ### Run Tests
 
