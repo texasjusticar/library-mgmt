@@ -28,3 +28,7 @@ All api requests must include the provided API token in the header as a Bearer A
 > rails db:test:prepare
 > bundle exec rspec
 ```
+
+### TODO
+
+[a relative link](EDGECASES.md) lists several items TODO to improve on this api.
