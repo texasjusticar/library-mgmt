@@ -12,9 +12,11 @@ HTTP API for managing a library's collection of books and handling various opera
 
 ### Initial Setup
 
-Before use, a librarian account with an api key must be setup.
+Before use, a librarian account with an api key must be setup.  Run the following rake tasks to accomplish this.
 
 ```ruby
+> bundle exec rails db:setup
+> bundle exec rails db:migrate
 > bundle exec rails librarian:setup
 ```
 

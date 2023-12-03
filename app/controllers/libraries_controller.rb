@@ -14,7 +14,8 @@ class LibrariesController < ApplicationController
   end
 
   def find_book
-    scope = @library&.books || Book
+    scope = @library&.books || Book # a library id of 0 will result in a nil for @library
+                                    # which performs a global book search instead
     @books = scope.includes(:library_book_copies).
       where("LOWER(title) like '%#{params[:token].downcase}%'")
   end
