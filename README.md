@@ -31,4 +31,4 @@ All api requests must include the provided API token in the header as a Bearer A
 
 ### TODO
 
-[a relative link](EDGECASES.md) lists several items TODO to improve on this api.
+[EdgeCases / TODO](EDGECASES.md) lists several items TODO to improve on this api.
